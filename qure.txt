@@ -1,0 +1,35 @@
+CREATE TABLE state_level (
+    date date,
+    state varchar(255),
+    fips int,
+    cases int,
+    deaths int
+);
+
+
+CREATE TABLE mobility (
+    state varchar(255),
+	county varchar(255),
+	date date,
+	retail decimal(6,3),
+    grocery_and_pharmacy decimal(6,3),
+	parks decimal(6,3),
+	transit_stations decimal(6,3),
+	workplaces decimal(6,3),
+	residential decimal(6,3),
+	county_mode varchar(255)
+);
+
+
+use qure;
+CREATE TABLE confirmed_deaths (
+    county_fips int,
+    county_name varchar(255),
+    state_name varchar(10),
+    state_fips int,
+    dates date,
+    deaths int,
+    lat decimal(6,3),
+    longitude decimal(6,3),
+    geometry varchar(500)
+);
